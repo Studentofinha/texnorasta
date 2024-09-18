@@ -22,8 +22,8 @@ const registerUser = asyncHandler(async (req, res) => {
 
 
 // @desc    Logout user & clear cookies
-// @desc    GET /api/users/logout 
-// @access  Private
+// @desc    POST /api/users/logout 
+// @access  Public
 
 const logoutUser = asyncHandler(async (req, res) => {
     res.send('logout user')
@@ -66,7 +66,7 @@ const getUsers = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const getUserById = asyncHandler(async (req, res) => {
-  res.send('get users by ID')
+  res.send('get user by ID')
 });
 
 
@@ -74,8 +74,8 @@ const getUserById = asyncHandler(async (req, res) => {
 // @desc    DELETE /api/users/:id
 // @access  Private/Admin
 
-const deleteUsers = asyncHandler(async (req, res) => {
-  res.send('delete users')
+const deleteUser = asyncHandler(async (req, res) => {
+  res.send('delete user')
 });
 
 // @desc    Update user
@@ -94,7 +94,7 @@ export {
   getUserProfile,
   updateUserProfile,
   getUsers,
-  deleteUsers,
+  deleteUser,
   getUserById,
   updateUser
 }
