@@ -32,10 +32,69 @@ const logoutUser = asyncHandler(async (req, res) => {
 
 
 // @desc    Get user profile
-// @desc    GET /api/users/users/profile
-// @access  Public
+// @desc    GET /api/users/profile
+// @access  Private
 
-const getUser = asyncHandler(async (req, res) => {
+const getUserProfile = asyncHandler(async (req, res) => {
     res.send('get user profile')
   });
   
+
+
+
+// @desc    Get user profile
+// @desc    PUT /api/users/profile
+// @access  Private
+
+const updateUserProfile = asyncHandler(async (req, res) => {
+  res.send('update user profile')
+});
+
+
+
+
+// @desc    Get users
+// @desc    GET /api/users
+// @access  Private/Admin
+
+const getUsers = asyncHandler(async (req, res) => {
+  res.send('get users')
+});
+
+// @desc    Get user by ID
+// @desc    GET /api/users/:id
+// @access  Private/Admin
+
+const getUserById = asyncHandler(async (req, res) => {
+  res.send('get users by ID')
+});
+
+
+// @desc    Delete users
+// @desc    DELETE /api/users/:id
+// @access  Private/Admin
+
+const deleteUsers = asyncHandler(async (req, res) => {
+  res.send('delete users')
+});
+
+// @desc    Update user
+// @desc    PUT /api/users/:id
+// @access  Private/Admin
+
+const updateUser = asyncHandler(async (req, res) => {
+  res.send('update user')
+});
+
+
+export {
+  authUser,
+  registerUser,
+  logoutUser,
+  getUserProfile,
+  updateUserProfile,
+  getUsers,
+  deleteUsers,
+  getUserById,
+  updateUser
+}
