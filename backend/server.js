@@ -6,9 +6,13 @@ import userRoutes from './routes/userRoutes.js'
 import { notFound, errorHandler } from "./middleware/errorHandler.js";
 dotenv.config();
 
-connectDB();
+connectDB(); //Mongodb connect
+
 const app = express();
 
+//Body parser middleware
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use(notFound);
