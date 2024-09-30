@@ -72,7 +72,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const getUsers = asyncHandler(async (req, res) => {
-  res.send("get users");
+  res.send("get all users");
 });
 
 // @desc    Get user by ID
