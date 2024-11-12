@@ -4,7 +4,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer style={{ backgroundColor: "#343a40", color: "#ffffff" }}>
