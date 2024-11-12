@@ -12,7 +12,11 @@ import "./assets/styles/index.css";
 import App from "./App";
 import HomeScreens from "./screens/HomeScreens";
 import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
 import store from "./store";
+import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +29,18 @@ const router = createBrowserRouter(
       <Route
         path="/product/:id"
         element={<ProductScreen></ProductScreen>}
+      ></Route>
+       <Route
+        path="/cart"
+        element={<CartScreen></CartScreen>}
+      ></Route>
+        <Route
+        path="/login"
+        element={<LoginScreen></LoginScreen>}
+      ></Route>
+       <Route
+        path="/register"
+        element={<RegisterScreen></RegisterScreen>}
       ></Route>
     </Route>
   )
